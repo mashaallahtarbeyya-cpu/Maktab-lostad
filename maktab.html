@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مكتبة الأستاذ - صوتية ومقروءة ومرئية</title>
+<style>
+*{box-sizing:border-box}body{font-family:'Segoe UI',Tahoma,sans-serif;background:#f6f1e7;margin:0;color:#222;line-height:1.8}
+header{background:#0f4c2e;color:#fff;padding:24px 16px;text-align:center}
+header h1{margin:0;font-size:30px}.search{max-width:600px;margin:14px auto 0;display:flex;gap:8px}.search input{flex:1;padding:13px;border-radius:30px;border:none;font-size:16px}.search button{background:#d4a017;border:none;padding:13px 20px;border-radius:30px;font-weight:bold;cursor:pointer}
+nav{background:#fff;padding:10px;text-align:center;position:sticky;top:0;box-shadow:0 2px 8px rgba(0,0,0,.1);z-index:10}nav a{display:inline-block;margin:4px;background:#eef3ef;padding:9px 14px;border-radius:30px;text-decoration:none;color:#0f4c2e;font-weight:bold}
+.wrap{max-width:950px;margin:auto;padding:16px}.hero{background:#fff;border-radius:16px;padding:20px;text-align:center;border-right:6px solid #d4a017}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}.card{background:#fff;border-radius:14px;padding:16px;box-shadow:0 3px 10px rgba(0,0,0,.07)}.card h3{margin:0 0 6px;color:#0f4c2e}.btn{display:inline-block;background:#0f4c2e;color:#fff;text-decoration:none;padding:9px 14px;border-radius:10px;font-weight:bold;margin:3px}.btn.gold{background:#d4a017;color:#111}.btn.light{background:#eee;color:#222}.tag{display:inline-block;background:#fff3cd;padding:3px 9px;border-radius:20px;font-size:12px;margin:2px}.sec{margin:28px 0 8px;color:#0f4c2e;border-bottom:3px solid #d4a017;display:inline-block}audio,video{width:100%;margin-top:8px}footer{background:#111;color:#ddd;text-align:center;padding:20px;margin-top:30px}footer a{color:#d4a017}
+</style>
+</head>
+<body>
+<header><h1>📚 مكتبة الأستاذ</h1><p>صدقة جارية - صوتيات ومقروءات وفيديوهات</p><div class="search"><input id="q" placeholder="قلب... الصبر، الرقية، العربية" onkeyup="searchAll(this.value)"><button onclick="searchAll(document.getElementById('q').value)">بحث 🔍</button></div><p>1000 صوتية • 200 كتاب • 300 فيديو • مجانا</p></header>
+<nav><a href="#sawtiya">🎧 صوتية</a><a href="#maqroua">📚 مقروءات</a><a href="#video">🎥 فيديوهات</a><a href="#salasil">📖 سلاسل</a><a href="#jadid">✨ جديد</a><a href="#da3m">🤲 ادعمنا</a></nav>
+<div class="wrap">
+<div class="hero"><h2>مرحبا بك</h2><p>سمع ولا قرا ولا تفرج، كلشي منظم و فابور.</p><a class="btn" href="#sawtiya">🎧 السماع</a><a class="btn gold" href="#maqroua">📚 القراءة</a><a class="btn" href="#video">🎥 المشاهدة</a></div>
+
+<h2 class="sec" id="jadid">✨ جديد هذا الأسبوع</h2><div class="grid"><div class="card"><h3>001 - قصة الصبر</h3><span class="tag">قصة</span><span class="tag">45 د</span><audio controls src="https://archive.org/download/maktabat-qisas/001-qissa-sabr.mp3"></audio></div><div class="card"><h3>📖 كتاب الصبر PDF</h3><span class="tag">كتاب</span><p>ملخص 20 صفحة</p><a class="btn" href="#">📖 قراءة</a></div></div>
+
+<h2 class="sec" id="sawtiya">🎧 المكتبة الصوتية</h2><p><button class="btn" onclick="filterCat('all','cat')">الكل</button><button class="btn gold" onclick="filterCat('قصة','cat')">قصص</button><button class="btn gold" onclick="filterCat('رقية','cat')">رقية</button><button class="btn gold" onclick="filterCat('درس','cat')">دروس</button></p><div class="grid"><div class="card cat" data-cat="قصة"><h3>🎧 001 - قصة - الصبر</h3><p>من maktabat-qisas</p><audio controls src=""></audio><a class="btn" href="#">▶ تشغيل</a><a class="btn light" href="#">⬇ تحميل</a></div><div class="card cat" data-cat="رقية"><h3>🎧 001 - رقية - الحسد</h3><p>من maktabat-roqya</p><audio controls src=""></audio><a class="btn" href="#">▶ تشغيل</a><a class="btn light" href="#">⬇ تحميل</a></div><div class="card cat" data-cat="درس"><h3>🎧 001 - درس - العربية</h3><p>من maktabat-doros</p><audio controls src=""></audio><a class="btn" href="#">▶ تشغيل</a><a class="btn light" href="#">⬇ تحميل</a></div></div>
+
+<h2 class="sec" id="maqroua">📚 المقروءات - الكتب</h2><div class="grid"><div class="card"><h3>📖 كتاب الصبر PDF</h3><p>20 صفحة</p><a class="btn" href="#">📖 قراءة</a><a class="btn light" href="#">⬇ تحميل</a></div><div class="card"><h3>📖 مطوية الرقية</h3><p>4 صفحات للطباعة</p><a class="btn" href="#">📖 قراءة</a><a class="btn light" href="#">⬇ تحميل</a></div><div class="card"><h3>📖 ملخص دروس العربية</h3><p>المستوى الخامس والسادس</p><a class="btn" href="#">📖 قراءة</a><a class="btn light" href="#">⬇ تحميل</a></div></div>
+
+<h2 class="sec" id="video">🎥 الفيديوهات</h2><p><button class="btn" onclick="filterCat('all','vcat')">الكل</button><button class="btn gold" onclick="filterCat('قصة','vcat')">قصص</button><button class="btn gold" onclick="filterCat('درس','vcat')">دروس</button></p><div class="grid"><div class="card vcat" data-cat="قصة"><h3>🎥 001 - قصة الصبر - فيديو</h3><video controls><source src="https://archive.org/download/maktabat-qisas/001-qissa-sabr.mp4" type="video/mp4"></video><a class="btn" href="#">▶ مشاهدة</a></div><div class="card vcat" data-cat="درس"><h3>🎥 001 - درس العربية - فيديو</h3><video controls><source src="https://archive.org/download/maktabat-doros/001-dars-arabia.mp4" type="video/mp4"></video><a class="btn" href="#">▶ مشاهدة</a></div></div>
+
+<h2 class="sec" id="salasil">📖 سلاسل متكاملة</h2><div class="grid"><div class="card"><h3>سلسلة القصص النبوية</h3><p>10 قصص مرتبة</p><a class="btn gold" href="#">دخل →</a></div><div class="card"><h3>سلسلة الرقية الشرعية</h3><p>5 رقى كاملة</p><a class="btn gold" href="#">دخل →</a></div><div class="card"><h3>سلسلة دروس العربية</h3><p>السنة كاملة</p><a class="btn gold" href="#">دخل →</a></div></div>
+
+<h2 class="sec" id="da3m">🤲 ادعمنا</h2><div class="card" style="text-align:center"><h3>المشروع مجاني لوجه الله</h3><p>دعيوة تكفينا، وإلا بغيتي تدعم جزاك الله خيرا.</p><a class="btn gold" href="#">ادعم 🤲</a><a class="btn light" href="#">شارك الموقع</a></div>
+</div>
+<footer><p>مكتبة الأستاذ © 2026 - صدقة جارية</p><p><a href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">↑ العودة للفوق</a> | <a href="javascript:history.back()">← رجوع</a></p></footer>
+<script>
+function searchAll(v){v=v.toLowerCase();document.querySelectorAll('.card').forEach(c=>{c.style.display=(c.innerText||'').toLowerCase().includes(v)?'':'none';});}
+function filterCat(cat,cls){document.querySelectorAll('.'+cls).forEach(c=>{c.style.display=(cat==='all'||c.dataset.cat===cat)?'':'none';});}
+</script>
+</body>
+</html>
